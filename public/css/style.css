@@ -339,6 +339,7 @@ strong {
 
 .custom-padding {
     padding: 90px 0 60px 0;
+    background-color: #f5f5f5;
 }
 
 .custom-padding.no-top {
@@ -11430,7 +11431,7 @@ footer.footer-bg {
     }
 }
 
-/* 
+/*
 <!-- ==========================================
      POPUP CSS
 ========================================== --> */
@@ -11656,8 +11657,9 @@ footer.footer-bg {
 
 .accessory-content h3 {
     margin: 4px 0 6px;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
 }
 
 .accessory-content p {
@@ -11678,8 +11680,8 @@ footer.footer-bg {
 }
 
 .accessory-footer strong {
-    font-size: 14px;
-    color: #222;
+    font-size: 18px;
+    color: black;
 }
 
 .accessory-footer a {
