@@ -39,12 +39,29 @@
     <link rel="manifest" href="{{ asset('images/favicon/site.webmanifest') }}" />
 
     <!-- JavaScripts -->
-  
+    <!-- <script src="{{ asset('js/modernizr.js') }}"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 
 <style>
-
+    body{
+        color: black;
+    }
+.accessory-content h3 {
+    margin: 4px 0 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+.custom-padding {
+    padding: 90px 0 60px 0;
+    background-color: #f5f5f5;
+}
+.footer-top .widget.my-quicklinks ul li a {
+    color: #000000;
+}
 .floating-action-menu {
     position: fixed;
     bottom: 50px;
