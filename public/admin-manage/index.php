@@ -22,7 +22,7 @@ if (isset($_POST["submit"])) {
 
         echo "<script>
                 setTimeout(function() {
-                    window.location.href = 'admin-manage/dashboard.php';
+                    window.location.href = 'admin-manage/dashboard.php'; 
                 }, 1000);
               </script>";
     } else {
