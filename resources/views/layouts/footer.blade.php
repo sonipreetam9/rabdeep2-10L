@@ -97,15 +97,16 @@
                         </div>
                     </div>
 
-                    <!-- <div class="copyright">
-                        <p>
-                            © 2026 {{ $CompanyName }}. All rights reserved.
-                        </p>
-                    </div> -->
                     <!-- Contact Us -->
                 </div>
 
             </div>
+
+                    <div class="copyright">
+                        <p>
+                            © 2026 {{ $CompanyName }}. All rights reserved.
+                        </p>
+                    </div>
         </div>
     </div>
 
