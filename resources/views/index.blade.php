@@ -529,11 +529,9 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 
                                 <div class="testimonial-meta-box">
                                     <div class="testimonial-meta">
-                                        <h3>
-                                            Happy Customer
-                                        </h3>
+
                                         <p>
-                                            Jeep Buyer
+                                            Karanjeet Singh
                                         </p>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -561,11 +559,9 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 
                                 <div class="testimonial-meta-box">
                                     <div class="testimonial-meta">
-                                        <h3>
-                                            Happy Customer
-                                        </h3>
+
                                         <p>
-                                            Accessories Customer
+                                            Arshdeep
                                         </p>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -594,11 +590,9 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 
                                 <div class="testimonial-meta-box">
                                     <div class="testimonial-meta">
-                                        <h3>
-                                            Happy Customer
-                                        </h3>
+
                                         <p>
-                                            Jeep Customization Customer
+                                            Raman
                                         </p>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -625,11 +619,9 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 
                                 <div class="testimonial-meta-box">
                                     <div class="testimonial-meta">
-                                        <h3>
-                                            Happy Customer
-                                        </h3>
+
                                         <p>
-                                            Jeep Customer
+                                            Aryan
                                         </p>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -657,11 +649,9 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 
                                 <div class="testimonial-meta-box">
                                     <div class="testimonial-meta">
-                                        <h3>
-                                            Happy Customer
-                                        </h3>
+
                                         <p>
-                                            SUV Customer
+                                            Dilbag Singh
                                         </p>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -688,11 +678,9 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
                                 </div>
                                 <div class="testimonial-meta-box">
                                     <div class="testimonial-meta">
-                                        <h3>
-                                            Happy Customer
-                                        </h3>
+
                                         <p>
-                                            Jeep & SUV Customer
+                                            Karan
                                         </p>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
