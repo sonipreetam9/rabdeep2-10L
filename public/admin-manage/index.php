@@ -20,11 +20,7 @@ if (isset($_POST["submit"])) {
         $_SESSION["username"] = $row['username'];
         $success_message = "Login successful! Redirecting to dashboard...";
 
-        echo "<script>
-                setTimeout(function() {
-                    window.location.href = 'admin-manage/dashboard.php'; 
-                }, 1000);
-              </script>";
+         header("Location: dashboard.php");
     } else {
         $error_message = "Invalid Username and Password";
     }
