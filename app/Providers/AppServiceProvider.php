@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
         $CompanyPhone2 = "9306255901";
         $CompanyWhatsapp = "9306255901";
         $CompanyEmail = "rabdeepmotors@gmail.com";
-        $CompanyAddress = "RABDEEP MOTORS JEEPS, Sirsa Road, near Mahindra Tractors, opp. chauhan nagar, Mandi Dabwali, Haryana 125104";
+        $CompanyAddress = "RABDEEP MOTORS JEEPS, Sirsa Road, opp. indane gas agency, Dhaliwal Nagar, Mandi Dabwali, Haryana 125104";
         $CompanyURL = "https://www.google.com";
 
 
