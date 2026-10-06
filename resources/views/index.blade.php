@@ -20,9 +20,9 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
             data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
             data-effect="skewleft(30,80)">Build Your Dream
             Jeep</h3>
-        <h3 class="ms-layer title4 font-white font-thin-xs" style="left:120px; top:210px;" data-type="text"
+        <h3 class="ms-layer title4 font-white font-thin-xs banner-parent" style="left:120px; top:210px;" data-type="text"
             data-delay="2500" data-duration="2000" data-ease="easeOutExpo" data-effect="skewleft(30,80)"><span
-                class="font-color font-thin-xs heading-color">Modified Jeeps</span></h3>
+                class="font-color font-thin-xs heading-color banner-text">Modified Jeeps</span></h3>
         <h5 class="ms-layer text1 font-white" style="left: 120px; top: 280px;" data-type="text" data-effect="bottom(45)"
             data-duration="2500" data-delay="3000" data-ease="easeOutExpo">Custom-built Jeeps designed with style,
             performance<br> and personalized modifications by Rabdeep Motors.
@@ -40,9 +40,9 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
             data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
             data-effect="skewleft(30,80)">Make It Your Own
         </h3>
-        <h3 class="ms-layer title4 font-white font-thin-xs" style="left:120px; top:210px;" data-type="text"
+        <h3 class="ms-layer title4 font-white font-thin-xs banner-parent" style="left:120px; top:210px;" data-type="text"
             data-delay="2500" data-duration="2000" data-ease="easeOutExpo" data-effect="skewleft(30,80)"><span
-                class="font-color font-thin-xs heading-color">Complete Jeep Customization</span></h3>
+                class="font-color font-thin-xs heading-color banner-text">Complete Jeep Customization</span></h3>
         <h5 class="ms-layer text1 font-white" style="left: 120px; top: 280px;" data-type="text" data-effect="bottom(45)"
             data-duration="2500" data-delay="3000" data-ease="easeOutExpo">From exterior styling and alloy wheels to
             premium interiors<br> and performance upgrades, customize your Jeep your way.
@@ -60,9 +60,9 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
             data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
             data-effect="skewleft(30,80)">Welcome To
         </h3>
-        <h3 class="ms-layer title4 font-white font-thin-xs" style="left:120px; top:210px;" data-type="text"
+        <h3 class="ms-layer title4 font-white font-thin-xs banner-parent" style="left:120px; top:210px;" data-type="text"
             data-delay="2500" data-duration="2000" data-ease="easeOutExpo" data-effect="skewleft(30,80)"><span
-                class="font-color font-thin-xs heading-color">Rabdeep Motors</span></h3>
+                class="font-color font-thin-xs heading-color banner-text">Rabdeep Motors</span></h3>
         <h5 class="ms-layer text1 font-white" style="left: 120px; top: 280px;" data-type="text" data-effect="bottom(45)"
             data-duration="2500" data-delay="3000" data-ease="easeOutExpo">Discover modified Jeeps, custom-built
             vehicles

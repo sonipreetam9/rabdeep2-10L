@@ -45,112 +45,123 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 
-<style>
-    body{
-        color: black;
-    }
-.accessory-content h3 {
-    margin: 4px 0 6px;
-    font-size: 14px;
-    font-weight: 600;
-    color: black;
-}
-.custom-padding {
-    padding: 90px 0 60px 0;
-    background-color: #f5f5f5;
-}
-.footer-top .widget.my-quicklinks ul li a {
-    color: #000000;
-}
-.floating-action-menu {
-    position: fixed;
-    bottom: 50px;
-    left: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    z-index: 99999;
-}
+    <style>
+        body {
+            color: black;
+        }
 
-.float-btn {
-    width: 60px;
-    height: 60px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
+        .accessory-content h3 {
+            margin: 4px 0 6px;
+            font-size: 14px;
+            font-weight: 600;
+            color: black;
+        }
 
-.float-btn img {
-    width: 60%;
-    height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
+        .custom-padding {
+            padding: 90px 0 60px 0;
+            background-color: #f5f5f5;
+        }
 
-.float-btn:hover {
-    transform: translateY(-8px) scale(1.1);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-}
+        .footer-top .widget.my-quicklinks ul li a {
+            color: #000000;
+        }
 
-.float-btn:hover img {
-    transform: scale(1.15);
-}
 
-/* =========================================
+
+        .banner-text {
+            background-color: white;
+            padding: 0px 10px;
+            border-radius: 0px 15px;
+        }
+
+        .floating-action-menu {
+            position: fixed;
+            bottom: 50px;
+            left: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 99999;
+        }
+
+        .float-btn {
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .float-btn img {
+            width: 60%;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .float-btn:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+        }
+
+        .float-btn:hover img {
+            transform: scale(1.15);
+        }
+
+        /* =========================================
    WHATSAPP PULSE
 ========================================= */
 
-.whatsapp-btn {
-    animation: pulse-glow 2s infinite;
-}
+        .whatsapp-btn {
+            animation: pulse-glow 2s infinite;
+        }
 
-.whatsapp-btn:hover {
-    animation: none;
-    transform: translateY(-8px) scale(1.1);
-    box-shadow: 0 12px 24px rgba(37, 211, 102, 0.45);
-}
+        .whatsapp-btn:hover {
+            animation: none;
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 12px 24px rgba(37, 211, 102, 0.45);
+        }
 
-/* =========================================
+        /* =========================================
    PULSE ANIMATION
 ========================================= */
 
-@keyframes pulse-glow {
-    0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-    }
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
 
-    70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
 
-    100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-}
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
 
-/* =========================================
+        /* =========================================
    MOBILE
 ========================================= */
 
-@media screen and (max-width: 600px) {
-    .floating-action-menu {
-        bottom: 35px;
-        left: 20px;
-    }
+        @media screen and (max-width: 600px) {
+            .floating-action-menu {
+                bottom: 35px;
+                left: 20px;
+            }
 
-    .float-btn {
-        width: 50px;
-        height: 50px;
-    }
-}
-
-</style>
+            .float-btn {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -167,11 +178,11 @@
                     <div class="header-top-left col-md-8 col-sm-6 col-xs-12 hidden-xs">
                         <ul class="listnone">
                             <li>
-    <a href="{{ route('index') }}">
-        <i class="fa fa-heart-o" aria-hidden="true"></i>
-        Welcome to Rabdeep Motors Jeeps – Your Trusted Jeep Dealer in Mandi Dabwali
-    </a>
-</li>
+                                <a href="{{ route('index') }}">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                    Welcome to Rabdeep Motors Jeeps – Your Trusted Jeep Dealer in Mandi Dabwali
+                                </a>
+                            </li>
 
 
                         </ul>
