@@ -49,6 +49,7 @@ $product_id = $_GET['product_id'];
                 if (isset($_POST['update'])) {
 
                     $product_id = $_POST['product_id'];
+                    $category_id = mysqli_real_escape_string($link, trim($_POST['category_id'])); // Added category_id
                     $product_name = mysqli_real_escape_string($link, trim($_POST['product_name']));
                     $engine = mysqli_real_escape_string($link, trim($_POST['engine']));
                     $tyre = mysqli_real_escape_string($link, trim($_POST['tyre']));
@@ -200,7 +201,7 @@ $product_id = $_GET['product_id'];
                                UPDATE QUERY
                             ================================================== */
 
-                            $update = "UPDATE product SET product_name = '$product_name', engine = '$engine', tyre = '$tyre', paint = '$paint', gear = '$gear', fuel = '$fuel', slug = '$slug',
+                            $update = "UPDATE product SET category_id = '$category_id', product_name = '$product_name', engine = '$engine', tyre = '$tyre', paint = '$paint', gear = '$gear', fuel = '$fuel', slug = '$slug',
                             product_short_description = '$product_short_description', product_long_description = '$product_long_description',product_price = '$product_price', product_status = '1', product_image1 = '$new_image1', product_image2 = '$new_image2', product_image3 = '$new_image3' WHERE product_id = '$product_id'";
 
                             /* =================================================
@@ -250,279 +251,216 @@ $product_id = $_GET['product_id'];
 
                             <div class="row gy-3">
 
+                                <!-- CATEGORY -->
+                                <div class="col-xl-3">
+                                    <label class="form-label">
+                                        Select Category
+                                    </label>
+                                    <select name="category_id" class="form-control" required>
+                                        <option value="">Select Category</option>
+                                        <?php
+                                        // Fetching categories that are active
+                                        $category_query = "SELECT * FROM categories WHERE status = '1' ORDER BY name ASC";
+                                        $category_result = mysqli_query($link, $category_query);
+
+                                        if (mysqli_num_rows($category_result) > 0) {
+                                            while ($row = mysqli_fetch_assoc($category_result)) {
+                                                // Check if the current option is the product's saved category
+                                                $selected = ($dataq['category_id'] == $row['id']) ? 'selected' : '';
+                                                echo '<option value="' . $row['id'] . '" ' . $selected . '>' . htmlspecialchars($row['name']) . '</option>';
+                                            }
+                                        } else {
+                                            echo '<option value="">No Categories Available</option>';
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
 
                                 <!-- PRODUCT NAME -->
-
-                                <div class="col-xl-12">
-
+                                <div class="col-xl-9">
                                     <label class="form-label">
                                         Product Name
                                     </label>
-
                                     <input type="text" class="form-control" name="product_name"
-                                        value="<?= $dataq['product_name'] ?>" required>
-
+                                        value="<?= htmlspecialchars($dataq['product_name']) ?>" required>
                                 </div>
 
 
                                 <!-- ENGINE -->
-
                                 <div class="col-xl-6">
-
                                     <label class="form-label">
                                         Engine CC
                                     </label>
-
                                     <input type="text" class="form-control" name="engine"
-                                        value="<?= $dataq['engine'] ?>" required>
-
+                                        value="<?= htmlspecialchars($dataq['engine']) ?>" required>
                                 </div>
 
 
                                 <!-- TYRE -->
-
                                 <div class="col-xl-6">
-
                                     <label class="form-label">
                                         Tyre
                                     </label>
-
                                     <input type="text" class="form-control" name="tyre"
-                                        value="<?= $dataq['tyre'] ?>" required>
-
+                                        value="<?= htmlspecialchars($dataq['tyre']) ?>" required>
                                 </div>
 
 
                                 <!-- PAINT -->
-
                                 <div class="col-xl-6">
-
                                     <label class="form-label">
                                         Paint Name
                                     </label>
-
                                     <input type="text" class="form-control" name="paint"
-                                        value="<?= $dataq['paint'] ?>" required>
-
+                                        value="<?= htmlspecialchars($dataq['paint']) ?>" required>
                                 </div>
 
 
                                 <!-- GEAR -->
-
                                 <div class="col-xl-6">
-
                                     <label class="form-label">
                                         Gear
                                     </label>
-
                                     <input type="text" class="form-control" name="gear"
-                                        value="<?= $dataq['gear'] ?>" required>
-
+                                        value="<?= htmlspecialchars($dataq['gear']) ?>" required>
                                 </div>
 
 
                                 <!-- FUEL -->
-
                                 <div class="col-xl-6">
-
                                     <label class="form-label">
                                         Fuel
                                     </label>
-
                                     <select name="fuel" class="form-control" required>
-
                                         <option value="">
                                             Select Fuel Type
                                         </option>
-
                                         <option value="Petrol" <?= ($dataq['fuel'] == 'Petrol') ? 'selected' : '' ?>>
                                             Petrol
                                         </option>
-
                                         <option value="Diesel" <?= ($dataq['fuel'] == 'Diesel') ? 'selected' : '' ?>>
                                             Diesel
                                         </option>
-
                                     </select>
-
                                 </div>
 
 
                                 <!-- PRICE -->
-
                                 <div class="col-xl-6">
-
                                     <label class="form-label">
                                         Price
                                     </label>
-
                                     <input type="text" class="form-control" name="product_price"
-                                        value="<?= $dataq['product_price'] ?>" required>
-
+                                        value="<?= htmlspecialchars($dataq['product_price']) ?>" required>
                                 </div>
 
 
                                 <!-- IMAGE 1 -->
-
                                 <div class="col-xl-10">
-
                                     <label class="form-label">
                                         Image 1
                                     </label>
-
                                     <input type="file" class="form-control" name="product_image1"
                                         accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
                                         onchange="previewImage(this,'preview1')">
-
                                 </div>
-
-
                                 <div class="col-xl-2">
-
                                     <label class="form-label">
                                         Current Image
                                     </label>
-
                                     <img id="preview1" src="Uploads/<?= $dataq['product_image1'] ?>"
                                         width="100%" height="150" style="object-fit:contain;border:1px solid #ddd;"
                                         alt="Image 1">
-
                                 </div>
 
 
                                 <!-- IMAGE 2 -->
-
                                 <div class="col-xl-10">
-
                                     <label class="form-label">
                                         Image 2
                                     </label>
-
                                     <input type="file" class="form-control" name="product_image2"
                                         accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
                                         onchange="previewImage(this,'preview2')">
-
                                 </div>
-
-
                                 <div class="col-xl-2">
-
                                     <label class="form-label">
                                         Current Image
                                     </label>
-
                                     <img id="preview2" src="Uploads/<?= $dataq['product_image2'] ?>"
                                         width="100%" height="150" style="object-fit:contain;border:1px solid #ddd;"
                                         alt="Image 2">
-
                                 </div>
 
 
                                 <!-- IMAGE 3 -->
-
                                 <div class="col-xl-10">
-
                                     <label class="form-label">
                                         Image 3
                                     </label>
-
                                     <input type="file" class="form-control" name="product_image3"
                                         accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
                                         onchange="previewImage(this,'preview3')">
-
                                 </div>
-
-
                                 <div class="col-xl-2">
-
                                     <label class="form-label">
                                         Current Image
                                     </label>
-
                                     <img id="preview3" src="Uploads/<?= $dataq['product_image3'] ?>"
                                         width="100%" height="150" style="object-fit:contain;border:1px solid #ddd;"
                                         alt="Image 3">
-
                                 </div>
 
 
                                 <!-- SHORT DESCRIPTION -->
-
                                 <div class="col-xl-12">
-
                                     <label class="form-label">
                                         Short Description
                                     </label>
-
                                     <textarea class="form-control" name="product_short_description" rows="5"
-                                        required><?= $dataq['product_short_description'] ?></textarea>
-
+                                        required><?= htmlspecialchars($dataq['product_short_description']) ?></textarea>
                                 </div>
 
 
                                 <!-- LONG DESCRIPTION -->
-
                                 <div class="col-xl-12">
-
                                     <label class="form-label">
                                         Long Description
                                     </label>
-
                                     <textarea class="form-control" id="summernote" name="product_long_description"
-                                        required><?= $dataq['product_long_description'] ?></textarea>
-
+                                        required><?= htmlspecialchars($dataq['product_long_description']) ?></textarea>
                                 </div>
 
 
                                 <!-- BUTTON -->
-
                                 <div class="card-footer border-top-0">
-
                                     <button type="submit" name="update" class="btn btn-primary">
                                         Update Product
                                     </button>
-
                                     <a href="all-product.php" class="btn btn-secondary ms-2">
                                         Back
                                     </a>
-
                                 </div>
-
                             </div>
-
                         </form>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </div>
-
 
 <script>
 function previewImage(input, imgPreviewId) {
-
     const file = input.files[0];
-
-    const preview =
-        document.getElementById(imgPreviewId);
+    const preview = document.getElementById(imgPreviewId);
 
     if (file) {
-
-        preview.src =
-            URL.createObjectURL(file);
-
+        preview.src = URL.createObjectURL(file);
     }
-
 }
 </script>
-
 
 <?php
 

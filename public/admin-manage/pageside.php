@@ -110,7 +110,28 @@
                     </ul>
                 </li> -->
 
-
+                <li class="slide has-sub">
+                    <a href="category.php" class="side-menu__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none" />
+                            <path d="M32,216V56a8,8,0,0,1,8-8H216a8,8,0,0,1,8,8V216l-32-16-32,16-32-16L96,216,64,200Z"
+                                fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="16" />
+                            <line x1="144" y1="112" x2="192" y2="112" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                            <line x1="144" y1="144" x2="192" y2="144" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                            <rect x="64" y="96" width="48" height="64" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                        </svg>
+                        <span class="side-menu__label">Category</span>
+                    </a>
+                    <ul class="slide-menu child1">
+                        <li class="slide side-menu__label1">
+                            <a href="category.php">Category</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="slide has-sub">
                     <a href="javascript:void(0);" class="side-menu__item">
                         <i class="ri-arrow-right-s-line side-menu__angle"></i>
@@ -313,7 +334,7 @@
                 </li>
                 <!--<li class="slide">-->
                 <!--    <a href="change-password.php" class="side-menu__item">-->
-                        <!-- 👤 User Icon -->
+                <!-- 👤 User Icon -->
                 <!--        <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 256 256">-->
                 <!--            <rect width="256" height="256" fill="none"></rect>-->
                 <!--            <rect x="40" y="88" width="176" height="128" rx="8" fill="none" stroke="currentColor"-->

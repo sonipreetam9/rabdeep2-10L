@@ -50,6 +50,10 @@
             color: black;
         }
 
+        .popular-cars-section {
+            padding: 20px 0;
+        }
+
         .accessory-content h3 {
             margin: 4px 0 6px;
             font-size: 14px;

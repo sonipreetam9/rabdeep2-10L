@@ -222,6 +222,28 @@ $dataq = mysqli_fetch_assoc($query);
 
                                 <tbody>
 
+                                    <!-- Category Name -->
+                                    <tr>
+                                        <th width="30%">
+                                            Category Name
+                                        </th>
+                                        <td>
+                                            <?php
+                                            $category_id = $dataq['category_id'];
+                                            $cat_query = mysqli_query($link, "SELECT name FROM categories WHERE id = '$category_id' LIMIT 1");
+
+                                            if ($cat_query && mysqli_num_rows($cat_query) > 0) {
+                                                $cat_row = mysqli_fetch_assoc($cat_query);
+                                                echo htmlspecialchars($cat_row['name']);
+                                            } else {
+                                                echo "No Category";
+                                            }
+                                            ?>
+                                        </td>
+                                    </tr>
+
+
+
                                     <!-- Product Name -->
                                     <tr>
 
@@ -386,13 +408,11 @@ $dataq = mysqli_fetch_assoc($query);
                                                 echo '<span class="badge bg-success">
                                                         Published
                                                       </span>';
-
                                             } else {
 
                                                 echo '<span class="badge bg-danger">
                                                         Draft
                                                       </span>';
-
                                             }
 
                                             ?>

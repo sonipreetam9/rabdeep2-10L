@@ -75,7 +75,7 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
     <!-- end of slide -->
 </div>
 
-<section class="search-best-section">
+<section class="search-best-section" style="margin-bottom: 30px;">
 
     <div class="container">
 
@@ -179,43 +179,47 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 <!-- end Master Slider -->
 <!-- =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-= -->
 <div class="main-content-area clearfix">
-    <section class="popular-cars-section">
-        <div class="container">
-            <!-- Heading Row -->
-            <div class="heading-wrapper">
-                <h2>Popular Jeeps</h2>
-                <a href="{{ route('product') }}" class="view-all-link">VIEW ALL JEEPS ></a>
-            </div>
-
-            <!-- Slider Container (Buttons + Cards) -->
-            <div class="slider-container">
-                <!-- Left Button -->
-                <button class="slider-btn prev-btn" id="slideLeft">&#10094;</button>
-                <!-- Scrollable Cards -->
-                <div class="cards-wrapper" id="cardsWrapper">
-                    @foreach ($products as $product)
-                    <!-- Card 1 -->
-                    <div class="car-card">
-                        <div class="car-img-wrapper">
-                            <img alt="" src="{{ asset('admin-manage/Uploads/' . $product->product_image1) }}">
-                        </div>
-                        <div class="car-details">
-                            <h3 class="car-name">{{ $product->product_name }}</h3>
-                            <div class="car-price">₹ {{ $product->product_price }}</div>
-                            <a href="{{ route('product.details', ['slug' => $product->slug]) }}" class="promo-text">View
-                                More</a>
-                        </div>
-                    </div>
-                    @endforeach
+@foreach ($categories as $category)
+    <!-- Only show section if the category actually has loaded products -->
+    @if ($category->products->count() > 0)
+        <section class="popular-cars-section ">
+            <div class="container">
+                <!-- Heading Row -->
+                <div class="heading-wrapper d-flex justify-content-between align-items-center mb-3">
+                    <h2>{{ $category->name }}</h2>
+                    <!-- You can pass a category filter parameter to the route if needed -->
+                    <a href="{{ route('product') }}" class="view-all-link">VIEW ALL  ></a>
                 </div>
 
-                <!-- Right Button -->
-                <button class="slider-btn next-btn" id="slideRight">&#10095;</button>
+                <!-- Slider Container (Buttons + Cards) -->
+                <div class="slider-container" style="position: relative;">
+                    <!-- Left Button (Dynamic ID) -->
+                    <button class="slider-btn prev-btn" id="slideLeft-{{ $category->id }}">&#10094;</button>
 
+                    <!-- Scrollable Cards (Dynamic ID) -->
+                    <div class="cards-wrapper" id="cardsWrapper-{{ $category->id }}">
+                        @foreach ($category->products as $product)
+                            <!-- Card -->
+                            <div class="car-card">
+                                <div class="car-img-wrapper">
+                                    <img alt="{{ $product->product_name }}" src="{{ asset('admin-manage/Uploads/' . $product->product_image1) }}">
+                                </div>
+                                <div class="car-details">
+                                    <h3 class="car-name">{{ $product->product_name }}</h3>
+                                    <div class="car-price">₹ {{ $product->product_price }}</div>
+                                    <a href="{{ route('product.details', ['slug' => $product->slug]) }}" class="promo-text">View More</a>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <!-- Right Button (Dynamic ID) -->
+                    <button class="slider-btn next-btn" id="slideRight-{{ $category->id }}">&#10095;</button>
+                </div>
             </div>
-
-        </div>
-    </section>
+        </section>
+    @endif
+@endforeach
 
     <!-- =-=-=-=-=-=-= Statistics Counter =-=-=-=-=-=-= -->
     <div class="funfacts custom-padding parallex">
@@ -363,6 +367,8 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
                                 Jeep Accessories
                             </span>
                         </h1>
+                    <a href="{{ route('accessories') }}" class="view-all-link">VIEW ALL  ></a>
+
                     </div>
                 </div>
             </div>

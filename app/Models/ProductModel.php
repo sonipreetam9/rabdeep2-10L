@@ -37,4 +37,9 @@ class ProductModel extends Model
         'shipping_cost',
         'product_status',
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(CategoryModel::class, 'category_id', 'id');
+    }
 }

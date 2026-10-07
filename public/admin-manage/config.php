@@ -1,7 +1,7 @@
 <?php
 
 
-$link = mysqli_connect("localhost","sesaqfswaq","CP6cGKQrFh","sesaqfswaq");
+$link = mysqli_connect("localhost","root","admin","rabdeep_motors");
 mysqli_set_charset($link, "utf8");
 
 if(mysqli_connect_error()){
