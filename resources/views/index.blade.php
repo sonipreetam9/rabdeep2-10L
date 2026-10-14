@@ -1,4 +1,4 @@
-﻿@extends('layouts.header')
+@extends('layouts.header')
 
 @section('title', 'Jeep & SUV Dealer | Jeep Accessories & Customization | Rabdeep Motors')
 @section('description', 'Explore Jeep and SUV vehicles, premium accessories, customization options and automotive
@@ -12,50 +12,17 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 <!-- Master Slider -->
 <div class="master-slider ms-skin-default" id="masterslider">
     <!-- slide 1 -->
-    <div class="ms-slide slide-1" data-delay="5">
-        <!-- slide background -->
-        <img src="{{ asset('js/masterslider/style/blank.gif') }}"
-            data-src="{{ asset('images/slider/banner-image.jpg') }}" alt="Slide1 background" />
-        <h3 class="ms-layer title4 font-white font-uppercase font-thin-xs" style="left:120px; top:150px;"
-            data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
-            data-effect="skewleft(30,80)">Build Your Dream
-            Jeep</h3>
-        <h3 class="ms-layer title4 font-white font-thin-xs banner-parent" style="left:120px; top:210px;" data-type="text"
-            data-delay="2500" data-duration="2000" data-ease="easeOutExpo" data-effect="skewleft(30,80)"><span
-                class="font-color font-thin-xs heading-color banner-text">Modified Jeeps</span></h3>
-        <h5 class="ms-layer text1 font-white" style="left: 120px; top: 280px;" data-type="text" data-effect="bottom(45)"
-            data-duration="2500" data-delay="3000" data-ease="easeOutExpo">Custom-built Jeeps designed with style,
-            performance<br> and personalized modifications by Rabdeep Motors.
-        </h5>
-        <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
-            data-ease="easeOutExpo" data-duration="2000" data-effect="scale(1.5,1.6)">View Portfolio</a>
-    </div>
+
     <!-- end of slide -->
-    <!-- slide 2 -->
-    <div class="ms-slide slide-3" data-delay="5">
-        <!-- slide background -->
-        <img src="{{ asset('js/masterslider/style/blank.gif') }}"
-            data-src="{{ asset('images/slider/banner-image.jpg') }}" alt="Slide1 background" />
-        <h3 class="ms-layer title4 font-white font-uppercase font-thin-xs" style="left:120px; top:150px;"
-            data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
-            data-effect="skewleft(30,80)">Make It Your Own
-        </h3>
-        <h3 class="ms-layer title4 font-white font-thin-xs banner-parent" style="left:120px; top:210px;" data-type="text"
-            data-delay="2500" data-duration="2000" data-ease="easeOutExpo" data-effect="skewleft(30,80)"><span
-                class="font-color font-thin-xs heading-color banner-text">Complete Jeep Customization</span></h3>
-        <h5 class="ms-layer text1 font-white" style="left: 120px; top: 280px;" data-type="text" data-effect="bottom(45)"
-            data-duration="2500" data-delay="3000" data-ease="easeOutExpo">From exterior styling and alloy wheels to
-            premium interiors<br> and performance upgrades, customize your Jeep your way.
-        </h5>
-        <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
-            data-ease="easeOutExpo" data-duration="2000" data-effect="scale(1.5,1.6)"> View Accessories</a>
-    </div>
-    <!-- end of slide -->
-    <div class="ms-slide slide-2" data-delay="4">
+
+@for($i=1;$i<=10;$i++)
+
+
+    <div class="ms-slide slide-1" data-delay="4">
         <div class="ms-overlay-layers"></div>
         <!-- slide background -->
         <img src="{{ asset('js/masterslider/style/blank.gif') }}"
-            data-src="{{ asset('images/slider/banner-image.jpg') }}" alt="Slide1 background" />
+            data-src="{{ asset('images/slider2/' . $i . '.jpeg') }}" alt="Slide1 background" />
         <h3 class="ms-layer title4 font-white font-uppercase font-thin-xs" style="left:120px; top:150px;"
             data-type="text" data-delay="2000" data-duration="2000" data-ease="easeOutExpo"
             data-effect="skewleft(30,80)">Welcome To
@@ -71,6 +38,9 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
         <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
             data-ease="easeOutExpo" data-duration="2000" data-effect="scale(1.5,1.6)"> About Us</a>
     </div>
+@endfor
+
+
     <!-- slide 2 -->
     <!-- end of slide -->
 </div>
@@ -88,26 +58,17 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 
                 <div class="search-best-wrapper" id="searchBestWrapper">
                     <!-- Card 1 : Google Business Profile -->
-                    <a href="https://share.google/7xmVXYN4cOPZ5GjvU" class="search-best-card" target="_blank"
+                    <a href="{{ route('accessories') }}" class="search-best-card" target="_blank"
                         rel="noopener noreferrer">
-                        <div class="search-card-icon google-icon">
+                        <div class="search-card-icon modified-icon">
                             <!-- Google G Logo -->
-                            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-label="Google" role="img">
-                                <path fill="#4285F4"
-                                    d="M24 9.5c3.54 0 6.7 1.22 9.19 3.61l6.85-6.85C35.9 2.38 30.47 0 24 0 14.61 0 6.5 5.38 2.56 13.22l7.98 6.19C12.43 13.07 17.74 9.5 24 9.5z" />
-                                <path fill="#34A853"
-                                    d="M46.5 24.5c0-1.57-.14-3.08-.41-4.5H24v9.02h12.65c-.54 2.91-2.18 5.38-4.65 7.02l7.55 5.86C43.95 37.73 46.5 31.65 46.5 24.5z" />
-                                <path fill="#FBBC05"
-                                    d="M10.54 28.41A14.47 14.47 0 0 1 9.5 24c0-1.53.37-3.01 1.04-4.41l-7.98-6.19A23.94 23.94 0 0 0 0 24c0 3.84.92 7.47 2.56 10.6l7.98-6.19z" />
-                                <path fill="#EA4335"
-                                    d="M24 48c6.48 0 11.92-2.14 15.9-5.82l-7.55-5.86c-2.09 1.4-4.76 2.23-8.35 2.23-6.26 0-11.57-3.57-13.46-8.91l-7.98 6.19C6.5 42.62 14.61 48 24 48z" />
-                            </svg>
+                          <i class="fa fa-lightbulb-o"></i>
                         </div>
                         <h3>
-                            No. 1 Google Rank
+                            Jeep Accessories
                         </h3>
                         <p>
-                            View on Google
+                            View Shop
                         </p>
                     </a>
 
@@ -150,12 +111,12 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 
 
                     <!-- Card 5 : Recently Deals Jeep -->
-                    <a href="{{ route('portfolio') }}" class="search-best-card">
+                    <a href="{{ route('product') }}" class="search-best-card">
                         <div class="search-card-icon deals-icon">
-                            <i class="fa-solid fa-tags"></i>
+                            <i class="fa-solid fa-car"></i>
                         </div>
-                        <h3>Recently Deals Jeep</h3>
-                        <p>Jeep Deals</p>
+                        <h3>View Jeeps</h3>
+                        <p>Jeep View</p>
                     </a>
 
 

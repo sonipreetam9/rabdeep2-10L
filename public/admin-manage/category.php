@@ -1,7 +1,5 @@
 <?php
-
 include 'header-top.php';
-
 ?>
 <!-- END SIDEBAR -->
 

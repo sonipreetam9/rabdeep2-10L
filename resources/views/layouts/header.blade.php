@@ -227,7 +227,7 @@
                             <!-- menu logo -->
                             <ul class="menu-logo">
                                 <li>
-                                    <a href="{{ route('index') }}"><img src="{{ asset('images/logo.png') }}" alt="logo"> </a>
+                                    <a href="{{ route('index') }}"><img src="{{ asset('images/logo.png') }}" alt="logo" width="130"> </a>
                                 </li>
                             </ul>
                             <!-- menu links -->
