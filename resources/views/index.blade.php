@@ -15,10 +15,10 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 
     <!-- end of slide -->
 
-@for($i=1;$i<=10;$i++)
+    @for($i=1;$i<=10;$i++)
 
 
-    <div class="ms-slide slide-1" data-delay="4">
+        <div class="ms-slide slide-1" data-delay="4">
         <div class="ms-overlay-layers"></div>
         <!-- slide background -->
         <img src="{{ asset('js/masterslider/style/blank.gif') }}"
@@ -37,12 +37,12 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
         </h5>
         <a class="ms-layer btn3 uppercase" style="left:120px; top: 390px;" data-type="text" data-delay="3500"
             data-ease="easeOutExpo" data-duration="2000" data-effect="scale(1.5,1.6)"> About Us</a>
-    </div>
+</div>
 @endfor
 
 
-    <!-- slide 2 -->
-    <!-- end of slide -->
+<!-- slide 2 -->
+<!-- end of slide -->
 </div>
 
 <section class="search-best-section" style="margin-bottom: 30px;">
@@ -62,7 +62,7 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
                         rel="noopener noreferrer">
                         <div class="search-card-icon modified-icon">
                             <!-- Google G Logo -->
-                          <i class="fa fa-lightbulb-o"></i>
+                            <i class="fa fa-lightbulb-o"></i>
                         </div>
                         <h3>
                             Jeep Accessories
@@ -140,47 +140,47 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 <!-- end Master Slider -->
 <!-- =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-= -->
 <div class="main-content-area clearfix">
-@foreach ($categories as $category)
+    @foreach ($categories as $category)
     <!-- Only show section if the category actually has loaded products -->
     @if ($category->products->count() > 0)
-        <section class="popular-cars-section ">
-            <div class="container">
-                <!-- Heading Row -->
-                <div class="heading-wrapper d-flex justify-content-between align-items-center mb-3">
-                    <h2>{{ $category->name }}</h2>
-                    <!-- You can pass a category filter parameter to the route if needed -->
-                    <a href="{{ route('product') }}" class="view-all-link">VIEW ALL  ></a>
-                </div>
-
-                <!-- Slider Container (Buttons + Cards) -->
-                <div class="slider-container" style="position: relative;">
-                    <!-- Left Button (Dynamic ID) -->
-                    <button class="slider-btn prev-btn" id="slideLeft-{{ $category->id }}">&#10094;</button>
-
-                    <!-- Scrollable Cards (Dynamic ID) -->
-                    <div class="cards-wrapper" id="cardsWrapper-{{ $category->id }}">
-                        @foreach ($category->products as $product)
-                            <!-- Card -->
-                            <div class="car-card">
-                                <div class="car-img-wrapper">
-                                    <img alt="{{ $product->product_name }}" src="{{ asset('admin-manage/Uploads/' . $product->product_image1) }}">
-                                </div>
-                                <div class="car-details">
-                                    <h3 class="car-name">{{ $product->product_name }}</h3>
-                                    <div class="car-price">₹ {{ $product->product_price }}</div>
-                                    <a href="{{ route('product.details', ['slug' => $product->slug]) }}" class="promo-text">View More</a>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-
-                    <!-- Right Button (Dynamic ID) -->
-                    <button class="slider-btn next-btn" id="slideRight-{{ $category->id }}">&#10095;</button>
-                </div>
+    <section class="popular-cars-section ">
+        <div class="container">
+            <!-- Heading Row -->
+            <div class="heading-wrapper d-flex justify-content-between align-items-center mb-3">
+                <h2>{{ $category->name }}</h2>
+                <!-- You can pass a category filter parameter to the route if needed -->
+                <a href="{{ route('product') }}" class="view-all-link">VIEW ALL ></a>
             </div>
-        </section>
+
+            <!-- Slider Container (Buttons + Cards) -->
+            <div class="slider-container" style="position: relative;">
+                <!-- Left Button (Dynamic ID) -->
+                <button class="slider-btn prev-btn" id="slideLeft-{{ $category->id }}">&#10094;</button>
+
+                <!-- Scrollable Cards (Dynamic ID) -->
+                <div class="cards-wrapper" id="cardsWrapper-{{ $category->id }}">
+                    @foreach ($category->products as $product)
+                    <!-- Card -->
+                    <div class="car-card">
+                        <div class="car-img-wrapper">
+                            <img alt="{{ $product->product_name }}" src="{{ asset('admin-manage/Uploads/' . $product->product_image1) }}">
+                        </div>
+                        <div class="car-details">
+                            <h3 class="car-name">{{ $product->product_name }}</h3>
+                            <div class="car-price">₹ {{ $product->product_price }}</div>
+                            <a href="{{ route('product.details', ['slug' => $product->slug]) }}" class="promo-text">View More</a>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+
+                <!-- Right Button (Dynamic ID) -->
+                <button class="slider-btn next-btn" id="slideRight-{{ $category->id }}">&#10095;</button>
+            </div>
+        </div>
+    </section>
     @endif
-@endforeach
+    @endforeach
 
     <!-- =-=-=-=-=-=-= Statistics Counter =-=-=-=-=-=-= -->
     <div class="funfacts custom-padding parallex">
@@ -315,140 +315,106 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
 
     </section>
 
-    <section class="custom-padding accessories-section">
+
+    <section class="custom-padding white">
         <div class="container">
 
-            <!-- HEADING -->
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="heading-panel">
+            @php
+            $category = $categories->first();
+            @endphp
+
+            @if ($category && $category->products->count() > 0)
+
+            <div class="row" style="margin-bottom: 20px;">
+
+                <div class="heading-panel">
+                    <div class="col-xs-12 col-md-12 col-sm-12 text-center">
                         <h1>
-                            Premium
                             <span class="heading-color">
-                                Jeep Accessories
+                                {{ $category->name }}
                             </span>
                         </h1>
-                    <a href="{{ route('accessories') }}" class="view-all-link">VIEW ALL  ></a>
-
                     </div>
                 </div>
-            </div>
 
-            <!-- ==========================================
-                       CATEGORY FILTER
-                     =========================================== -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active">
 
-            <div class="row accessories-category-row">
-                <!-- ALL -->
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <button type="button" class="accessory-filter active" data-filter="all">
-                        <i class="fa fa-th-large"></i>
-                        <span>All</span>
-                    </button>
-                </div>
+                        @foreach ($category->products->take(6) as $product)
 
+                        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                            <div class="white category-grid-box-1">
 
-                <!-- EXTERIOR -->
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <button type="button" class="accessory-filter" data-filter="exterior">
-                        <i class="fa fa-car"></i>
-                        <span>Exterior</span>
-                    </button>
-                </div>
+                                <div class="image">
+                                    <img
+                                        alt="{{ $product->product_name }}"
+                                        src="{{ asset('admin-manage/Uploads/' . $product->product_image1) }}"
+                                        class="img-responsive"
+                                        style="width: 100%; height: 280px; object-fit: cover;">
+                                </div>
 
+                                <div class="short-description-1">
 
-                <!-- LIGHTING -->
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <button type="button" class="accessory-filter" data-filter="lighting">
-                        <i class="fa fa-lightbulb-o"></i>
-                        <span>Lighting</span>
-                    </button>
-                </div>
+                                    <div class="category-title">
+                                        <span>
+                                            <a href="#">
+                                                {{ $category->name }}
+                                            </a>
+                                        </span>
+                                    </div>
 
+                                    <h3>
+                                        <a title="{{ $product->product_name }}"
+                                            href="{{ route('product.details', ['slug' => $product->slug]) }}">
+                                            {{ $product->product_name }}
+                                        </a>
+                                    </h3>
 
-                <!-- WHEELS -->
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <button type="button" class="accessory-filter" data-filter="wheels">
-                        <i class="fa fa-circle-o"></i>
-                        <span>Wheels</span>
-                    </button>
-                </div>
+                                    <p class="location">
+                                        <i class="fa fa-map-marker"></i>
+                                        Sirsa Road, Dabwali, Haryana
+                                    </p>
 
+                                    <span class="ad-price">
+                                        ₹{{ $product->product_price }}
+                                    </span>
 
-                <!-- INTERIOR -->
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <button type="button" class="accessory-filter" data-filter="interior">
-                        <i class="fa fa-car"></i>
-                        <span>Interior</span>
-                    </button>
-                </div>
+                                </div>
 
-            </div>
+                                <div class="ad-info-1">
+                                    <ul>
+                                        <li>
+                                            <i class="flaticon-fuel-1"></i>
+                                            {{ $product->fuel }}
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-dashboard"></i>
+                                            {{ $product->tyre }}
+                                        </li>
+                                        <li>
+                                            <i class="flaticon-engine-2"></i>
+                                            {{ $product->engine }}
+                                        </li>
+                                    </ul>
+                                </div>
 
-
-            <!-- ==========================================
-                                                         ACCESSORIES GRID
-                                            =========================================== -->
-
-            <div class="row accessories-grid">
-
-                @forelse ($Accessories as $item)
-                @php
-                $category = strtolower(trim($item->category));
-                $image = asset('admin-manage/Uploads/' . $item->image);
-                $whatsappMessage = 'Hello Rabdeep Motors, I am interested in ' . $item->title . '. Price: ₹' .
-                $item->price;
-                @endphp
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 accessory-item" data-category="{{ $category }}">
-                    <div class="accessory-card">
-
-                        <!-- IMAGE -->
-                        <div class="accessory-image">
-                            <img src="{{ $image }}" alt="{{ $item->title }}" class="img-responsive">
-                            <span class="accessory-badge">
-                                {{ ucfirst($item->category) }}
-                            </span>
-                            <a href="{{ $image }}" class="accessory-zoom" target="_blank"
-                                title="View {{ $item->title }}">
-                                <i class="fa fa-search-plus"></i>
-                            </a>
-                        </div>
-                        <!-- CONTENT -->
-                        <div class="accessory-content">
-                            <!-- CATEGORY -->
-                            <span class="accessory-category">
-                                {{ $item->category }}
-                            </span>
-                            <!-- TITLE -->
-                            <h3>
-                                {{ $item->title }}
-                            </h3>
-                            <!-- FOOTER -->
-                            <div class="accessory-footer">
-                                <!-- PRICE -->
-                                <strong>
-                                    ₹{{ $item->price }}
-                                </strong>
-                                <!-- WHATSAPP -->
-                                <a href="https://wa.me/91{{ $CompanyPhone1 }}?text={{ urlencode($whatsappMessage) }}"
-                                    target="_blank" rel="noopener noreferrer">
-                                    Enquire Now
-                                </a>
                             </div>
                         </div>
+
+                        @endforeach
+
+                        <div class="clearfix"></div>
+
                     </div>
                 </div>
-                @empty
-                <div class="col-md-12">
-                    <div class="alert alert-info text-center">
-                        No accessories available at the moment.
-                    </div>
-                </div>
-                @endforelse
+
             </div>
+
+            @endif
+
         </div>
     </section>
+
 
 
     <!-- =-=-=-=-=-=-= Customer Reviews Section =-=-=-=-=-=-= -->
@@ -479,184 +445,37 @@ services at Rabdeep Motors. Find the right vehicle and accessories for your need
                     <div class="row">
                         <div class="owl-testimonial-1">
 
-                            <!-- Review 1 -->
-                            <div class="single_testimonial">
-                                <div class="textimonial-content">
-                                    <h4>
-                                        Great Jeep Buying Experience
-                                    </h4>
-                                    <p>
-                                        Rabdeep Motors made the Jeep buying
-                                        process simple and straightforward.
-                                        The team was helpful in explaining
-                                        the vehicle features and available
-                                        options.
-                                    </p>
-                                </div>
 
-                                <div class="testimonial-meta-box">
-                                    <div class="testimonial-meta">
+                          @foreach ($reviews as $review)
+    <div class="single_testimonial">
+        <div class="textimonial-content">
+            <h4>
+                <img src="{{ asset('images/review.png') }}"
+                     alt="Customer Review"
+                     style="width:50px; object-fit:contain;">
+                {{ $review->name }}
+            </h4>
 
-                                        <p>
-                                            Karanjeet Singh
-                                        </p>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
+            <p>
+                {{ $review->review }}
+            </p>
+        </div>
 
-                            <!-- Review 2 -->
-                            <div class="single_testimonial">
-                                <div class="textimonial-content">
-                                    <h4>
-                                        Excellent Jeep Accessories
-                                    </h4>
-                                    <p>
-                                        I was looking for quality accessories
-                                        for my Jeep and found several useful
-                                        options at Rabdeep Motors. The team
-                                        helped me choose accessories according
-                                        to my requirements.
-                                    </p>
-                                </div>
-
-                                <div class="testimonial-meta-box">
-                                    <div class="testimonial-meta">
-
-                                        <p>
-                                            Arshdeep
-                                        </p>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
+        <div class="testimonial-meta-box">
+            <div class="testimonial-meta">
+                @for ($i = 1; $i <= 5; $i++)
+                    <i class="fa fa-star"
+                       style="color: {{ $i <= $review->star ? '#ffc107' : '#ccc' }};">
+                    </i>
+                @endfor
+            </div>
+        </div>
+    </div>
+@endforeach
 
 
-                            <!-- Review 3 -->
-
-                            <div class="single_testimonial">
-                                <div class="textimonial-content">
-                                    <h4>
-                                        Professional Customization
-                                    </h4>
-                                    <p>
-                                        The customization team understood
-                                        what I wanted for my Jeep and helped
-                                        me select the right accessories and
-                                        styling options for my vehicle.
-                                    </p>
-                                </div>
-
-                                <div class="testimonial-meta-box">
-                                    <div class="testimonial-meta">
-
-                                        <p>
-                                            Raman
-                                        </p>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Review 4 -->
-                            <div class="single_testimonial">
-                                <div class="textimonial-content">
-                                    <h4>
-                                        Helpful & Knowledgeable Team
-                                    </h4>
-                                    <p>
-                                        The Rabdeep Motors team was helpful
-                                        throughout the process. They explained
-                                        the available Jeep options and helped
-                                        me make the right choice for my needs.
-                                    </p>
-                                </div>
-
-                                <div class="testimonial-meta-box">
-                                    <div class="testimonial-meta">
-
-                                        <p>
-                                            Aryan
-                                        </p>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
 
 
-                            <!-- Review 5 -->
-                            <div class="single_testimonial">
-                                <div class="textimonial-content">
-                                    <h4>
-                                        Quality Jeep Styling Options
-                                    </h4>
-                                    <p>
-                                        Rabdeep Motors offers a good range of
-                                        Jeep styling and accessory options.
-                                        The team helped me find products that
-                                        matched the look I wanted for my SUV.
-                                    </p>
-                                </div>
-
-                                <div class="testimonial-meta-box">
-                                    <div class="testimonial-meta">
-
-                                        <p>
-                                            Dilbag Singh
-                                        </p>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <!-- Review 6 -->
-                            <div class="single_testimonial">
-                                <div class="textimonial-content">
-                                    <h4>
-                                        Trusted Jeep & SUV Partner
-                                    </h4>
-                                    <p>
-                                        The overall experience was smooth and
-                                        professional. Rabdeep Motors provides
-                                        helpful guidance for Jeep vehicles,
-                                        accessories and customization needs.
-                                    </p>
-                                </div>
-                                <div class="testimonial-meta-box">
-                                    <div class="testimonial-meta">
-
-                                        <p>
-                                            Karan
-                                        </p>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="clearfix"></div>
                     </div>

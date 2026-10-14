@@ -62,7 +62,7 @@
         }
 
         .custom-padding {
-            padding: 90px 0 60px 0;
+            padding: 40px 0 40px 0;
             background-color: #f5f5f5;
         }
 
@@ -195,7 +195,7 @@
                     <div class="header-right col-md-4 col-sm-6 col-xs-12 ">
                         <div class="pull-right">
                             <ul class="listnone">
-
+<!--
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                         aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe"
@@ -207,7 +207,7 @@
                                         <li><a href="#">Russian</a></li>
                                         <li><a href="#">chinese</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
