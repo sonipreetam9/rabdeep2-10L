@@ -1,11 +1,11 @@
 <aside class="app-sidebar sticky" id="sidebar">
     <div class="main-sidebar-header">
         <a href="dashboard.php" class="header-logo">
-            <img src="assets/images/logo.png" alt="logo" class="desktop-logo" style="height: 60px;">
-            <img src="assets/images/logo.png" alt="logo" class="toggle-dark">
-            <img src="assets/images/logo.png" alt="logo" class="desktop-dark"
+            <img src="assets/images/rabdeep-logo.png" alt="logo" class="desktop-logo" style="height: 60px;">
+            <img src="assets/images/rabdeep-logo.png" alt="logo" class="toggle-dark">
+            <img src="assets/images/rabdeep-logo.png" alt="logo" class="desktop-dark"
                 style="height: 55px; border-radius: 10px;">
-            <img src="assets/images/logo.png" alt="logo" class="toggle-logo">
+            <img src="assets/images/rabdeep-logo.png" alt="logo" class="toggle-logo">
         </a>
     </div>
 

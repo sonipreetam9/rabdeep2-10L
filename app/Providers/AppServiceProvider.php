@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
 
 
         // ******************** Company Assets ******************** //
-        $CompanyLogo = 'admin/assets/images/logo.png';
+        $CompanyLogo = 'admin/assets/images/rabdeep-logo.png';
         $CompanyFavicon = 'admin/assets/images/favicon.png';
 
         // ******************** Company Social Media Links ******************** //

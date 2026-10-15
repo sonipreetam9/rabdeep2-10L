@@ -227,7 +227,7 @@
                             <!-- menu logo -->
                             <ul class="menu-logo">
                                 <li>
-                                    <a href="{{ route('index') }}"><img src="{{ asset('images/logo.png') }}" alt="logo" width="145" style="object-fit:contain;"> </a>
+                                    <a href="{{ route('index') }}"><img src="{{ asset('images/rabdeep-logo.png') }}" alt="logo" width="145" style="object-fit:contain;"> </a>
                                 </li>
                             </ul>
                             <!-- menu links -->

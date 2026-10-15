@@ -18,7 +18,7 @@
                 <div class="col-md-3  col-sm-6 col-xs-12">
                     <!-- Info Widget -->
                     <div class="widget">
-                        <div class="logo"> <img alt="" src="{{ asset('images/logo.png') }}"> </div>
+                        <div class="logo"> <img alt="" src="{{ asset('images/rabdeep-logo.png') }}"> </div>
                         <p>At Rabdeep Motors, we redefine the art of car modification and customization. Our passion for
                             high-performance, luxury, and uniquely modified cars drives us to offer a handpicked
                             collection of custom-tuned vehicles that turn heads on the road.</p>

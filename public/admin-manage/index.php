@@ -60,7 +60,7 @@ if (isset($_POST["submit"])) {
                         <div class="p-3">
                             <div class="mb-3 d-flex justify-content-center auth-logo">
                             <a href="index.php">
-                                <img src="assets/images/logo.png" alt="logo" style="height: 80px; border-radius: 10px; background-color: white;" class="desktop-dark">
+                                <img src="assets/images/rabdeep-logo.png" alt="logo" style="height: 80px; border-radius: 10px; background-color: white;" class="desktop-dark">
                             </a>
                         </div>
                             <form action="" method="post">

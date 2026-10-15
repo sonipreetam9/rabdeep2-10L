@@ -24,7 +24,7 @@ if (!isset($_SESSION['superid'])) {
     <meta name="Author" content="">
     <meta name="keywords" content="">
     <title>Rabdeep MotorsAdmin</title>
-    <link rel="icon" href="../images/logo/logo.png" type="image/x-icon">
+    <link rel="icon" href="../images/logo/rabdeep-logo.png" type="image/x-icon">
     <link id="style" href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/icon-fonts/icons.css" rel="stylesheet">
@@ -100,10 +100,10 @@ if (!isset($_SESSION['superid'])) {
                     <div class="header-element">
                         <div class="horizontal-logo">
                             <a href="dashboard.php" class="header-logo">
-                                <img src="assets/images/logo.png" alt="logo" class="desktop-logo">
-                                <img src="assets/images/logo.png" alt="logo" class="toggle-logo">
-                                <img src="assets/images/logo.png" alt="logo" class="desktop-dark">
-                                <img src="assets/images/logo.png" alt="logo" class="toggle-dark">
+                                <img src="assets/images/rabdeep-logo.png" alt="logo" class="desktop-logo">
+                                <img src="assets/images/rabdeep-logo.png" alt="logo" class="toggle-logo">
+                                <img src="assets/images/rabdeep-logo.png" alt="logo" class="desktop-dark">
+                                <img src="assets/images/rabdeep-logo.png" alt="logo" class="toggle-dark">
                             </a>
                         </div>
                     </div>
