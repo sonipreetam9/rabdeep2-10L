@@ -251,7 +251,7 @@ modifications and personalized Jeep customization in Mandi Dabwali, Haryana.')
 
                   <figure class="wow bounceInUp" data-wow-delay="0ms" data-wow-duration="2500ms">
 
-                     <img class="center-block img-responsive" src="{{ asset('images/why-choose.webp') }}"
+                     <img class="center-block img-responsive" src="{{ asset('images/abb.jpeg') }}"
                         alt="Modified Jeep by Rabdeep Motors">
 
                   </figure>
